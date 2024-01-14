@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\ASD\dsf_somador_completo\simulation\qsim
+vdsf_somador_completo
+Z1 !s100 nZBon8Q9=_oNPd:U49Ac:2
+Z2 IFN5F7n?LSf04BUbUmJmbQ3
+Z3 VkB02CT]lZJBAk@bcCWe710
+Z4 dC:\altera\ASD\dsf_somador_completo\simulation\qsim
+Z5 w1705240459
+Z6 8dsf_somador_completo.vo
+Z7 Fdsf_somador_completo.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|dsf_somador_completo.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1705240459.941000
+Z12 !s107 dsf_somador_completo.vo|
+!s101 -O0
+vdsf_somador_completo_vlg_check_tst
+!i10b 1
+Z13 !s100 T0mB<I5<d^VaeMG@UQ5l=3
+Z14 IOTib;Y8g6VPLV5b]WPX_o1
+Z15 V7:UV0EAVIJ<d]Q9^cSRW02
+R4
+Z16 w1705240458
+Z17 8dsf_somador_completo.vt
+Z18 Fdsf_somador_completo.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1705240460.072000
+Z20 !s107 dsf_somador_completo.vt|
+Z21 !s90 -work|work|dsf_somador_completo.vt|
+!s101 -O0
+R10
+vdsf_somador_completo_vlg_sample_tst
+!i10b 1
+Z22 !s100 :^T;7]P@hFOVII0<l^1791
+Z23 IgbcT;98ZCXg>Tg^Rz0]?Q2
+Z24 VLb>XoXDLoN8:bY5UW`4W:3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vdsf_somador_completo_vlg_vec_tst
+!i10b 1
+!s100 2We4Db7Il]Aj1;dA:b42;3
+I:BPQONi2M1j0z;A<ofz7E3
+Z25 VS>>L]R^WYPFR296<e_A821
+R4
+R16
+R17
+R18
+Z26 L0 183
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

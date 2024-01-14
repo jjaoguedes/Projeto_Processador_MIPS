@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/ASD/dsf_somador_completo/dsf_somador_completo.v
+source_file = 1, C:/altera/ASD/dsf_somador_completo/Waveform.vwf
+source_file = 1, C:/altera/ASD/dsf_somador_completo/db/dsf_somador_completo.cbx.xml
+design_name = dsf_somador_completo
+instance = comp, \soma~output , soma~output, dsf_somador_completo, 1
+instance = comp, \CarryOut~output , CarryOut~output, dsf_somador_completo, 1
+instance = comp, \a~input , a~input, dsf_somador_completo, 1
+instance = comp, \b~input , b~input, dsf_somador_completo, 1
+instance = comp, \CarryIn~input , CarryIn~input, dsf_somador_completo, 1
+instance = comp, \soma~0 , soma~0, dsf_somador_completo, 1
+instance = comp, \CarryOut~0 , CarryOut~0, dsf_somador_completo, 1
