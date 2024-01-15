@@ -1,0 +1,10 @@
+|dsf_Mult4to1
+In1[0] => Mux0.IN0
+In2[0] => Mux0.IN1
+In3[0] => Mux0.IN2
+In4[0] => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[1] => Mux0.IN4
+Out[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

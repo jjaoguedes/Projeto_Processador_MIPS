@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/ASD/dsf_Mult4to1/dsf_Mult4to1.v
+source_file = 1, C:/altera/ASD/dsf_Mult4to1/Waveform.vwf
+source_file = 1, C:/altera/ASD/dsf_Mult4to1/db/dsf_Mult4to1.cbx.xml
+design_name = dsf_Mult4to1
+instance = comp, \Out[0]~output , Out[0]~output, dsf_Mult4to1, 1
+instance = comp, \Sel[1]~input , Sel[1]~input, dsf_Mult4to1, 1
+instance = comp, \In1[0]~input , In1[0]~input, dsf_Mult4to1, 1
+instance = comp, \In2[0]~input , In2[0]~input, dsf_Mult4to1, 1
+instance = comp, \Sel[0]~input , Sel[0]~input, dsf_Mult4to1, 1
+instance = comp, \Mux0~0 , Mux0~0, dsf_Mult4to1, 1
+instance = comp, \In3[0]~input , In3[0]~input, dsf_Mult4to1, 1
+instance = comp, \In4[0]~input , In4[0]~input, dsf_Mult4to1, 1
+instance = comp, \Mux0~1 , Mux0~1, dsf_Mult4to1, 1
