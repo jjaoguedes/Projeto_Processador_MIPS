@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\ASD\dsf_Mult2to1\simulation\qsim
+vdsf_Mult2to1
+Z1 !s100 I8AX02=cm6=V53;f2;E=l0
+Z2 IKWlX3<F3<T]8MjHi9KFj;1
+Z3 V;XfI5f_8F3k@[Wl0?Z9if3
+Z4 dC:\altera\ASD\dsf_Mult2to1\simulation\qsim
+Z5 w1705367974
+Z6 8dsf_Mult2to1.vo
+Z7 Fdsf_Mult2to1.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|dsf_Mult2to1.vo|
+Z10 o-work work -O0
+Z11 ndsf_@mult2to1
+!i10b 1
+!s85 0
+Z12 !s108 1705367974.518000
+Z13 !s107 dsf_Mult2to1.vo|
+!s101 -O0
+vdsf_Mult2to1_vlg_check_tst
+!i10b 1
+Z14 !s100 zOZDH7=ecQRY]8D`[J^352
+Z15 INF8T1mOh2WTaPMoDAQS^C2
+Z16 VlddId[jKR@kSjbCQ@Y`IP0
+R4
+Z17 w1705367973
+Z18 8dsf_Mult2to1.vt
+Z19 Fdsf_Mult2to1.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1705367974.576000
+Z21 !s107 dsf_Mult2to1.vt|
+Z22 !s90 -work|work|dsf_Mult2to1.vt|
+!s101 -O0
+R10
+Z23 ndsf_@mult2to1_vlg_check_tst
+vdsf_Mult2to1_vlg_sample_tst
+!i10b 1
+Z24 !s100 ^KR4LE1e?eh]C?WQhFDg10
+Z25 IIQF<WEcFW8NQl67VfjkMi0
+Z26 VSQLHTc]NJWTCha<nf4Y_L1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 ndsf_@mult2to1_vlg_sample_tst
+vdsf_Mult2to1_vlg_vec_tst
+!i10b 1
+!s100 >:QmRH]TOcDk=JO]KXZ^?1
+IKDWEDhV_h;XKU?lTZi1;53
+Z28 V:7M;U71zEI5L3APT^7DCc1
+R4
+R17
+R18
+R19
+Z29 L0 162
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 ndsf_@mult2to1_vlg_vec_tst

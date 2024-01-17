@@ -1,0 +1,58 @@
+$comment
+	File created using the following command:
+		vcd file dsf_ALU.msim.vcd -direction
+$end
+$date
+	Tue Jan 16 21:06:33 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module dsf_ALU_vlg_vec_tst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 2 # operacao [1:0] $end
+$var wire 1 $ Result $end
+$var wire 1 % sampler $end
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , a~input_o $end
+$var wire 1 - Result~output_o $end
+$var wire 1 . operacao[0]~input_o $end
+$var wire 1 / b~input_o $end
+$var wire 1 0 inst|Selector0~0_combout $end
+$var wire 1 1 operacao[1]~input_o $end
+$var wire 1 2 inst|Out~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+b1 #
+0$
+x%
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+1.
+0/
+00
+01
+02
+$end
+#1000000

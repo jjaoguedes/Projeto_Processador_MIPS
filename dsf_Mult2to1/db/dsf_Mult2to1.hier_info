@@ -1,0 +1,10 @@
+|dsf_Mult2to1
+In1[0] => Selector0.IN2
+In2[0] => Selector0.IN3
+Sel[0] => Equal0.IN63
+Sel[0] => Equal1.IN63
+Sel[1] => Equal0.IN62
+Sel[1] => Equal1.IN62
+Out[0] <= Out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

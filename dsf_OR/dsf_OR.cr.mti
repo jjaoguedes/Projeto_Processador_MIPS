@@ -1,8 +1,0 @@
-C:/altera/ASD/dsf_OR/dsf_OR.v {1 {vlog -work work C:/altera/ASD/dsf_OR/dsf_OR.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module dsf_OR
-
-Top level modules:
-	dsf_OR
-
-} {} {}}
