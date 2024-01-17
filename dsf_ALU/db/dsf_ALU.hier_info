@@ -1,20 +1,39 @@
 |dsf_ALU
-Result <= dsf_Mult2to1:inst.Out
+Result <= dsf_Mult3to1:inst.Out
 a => inst15.IN0
 a => inst16.IN1
+a => dsf_somador_completo:inst1.a
 b => inst15.IN1
 b => inst16.IN0
-operacao[0] => dsf_Mult2to1:inst.Sel[0]
-operacao[1] => dsf_Mult2to1:inst.Sel[1]
+b => dsf_somador_completo:inst1.b
+CarryIn => dsf_somador_completo:inst1.CarryIn
+operacao[0] => dsf_Mult3to1:inst.Sel[0]
+operacao[1] => dsf_Mult3to1:inst.Sel[1]
+CarryOut <= dsf_somador_completo:inst1.CarryOut
 
 
-|dsf_ALU|dsf_Mult2to1:inst
-In0 => Selector0.IN2
-In1 => Selector0.IN3
-Sel[0] => Equal0.IN63
-Sel[0] => Equal1.IN63
-Sel[1] => Equal0.IN62
-Sel[1] => Equal1.IN62
+|dsf_ALU|dsf_Mult3to1:inst
+In0 => Mux0.IN1
+In1 => Mux0.IN2
+In2 => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[0] => Mux1.IN5
+Sel[1] => Mux0.IN4
+Sel[1] => Mux1.IN4
 Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_somador_completo:inst1
+a => soma.IN0
+a => CarryOut.IN0
+a => CarryOut.IN0
+b => soma.IN1
+b => CarryOut.IN1
+b => CarryOut.IN0
+CarryIn => soma.IN1
+CarryIn => CarryOut.IN1
+CarryIn => CarryOut.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+CarryOut <= CarryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 

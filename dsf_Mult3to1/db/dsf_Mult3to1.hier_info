@@ -1,0 +1,11 @@
+|dsf_Mult3to1
+In0 => Mux0.IN1
+In1 => Mux0.IN2
+In2 => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[0] => Mux1.IN5
+Sel[1] => Mux0.IN4
+Sel[1] => Mux1.IN4
+Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
