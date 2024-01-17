@@ -52,6 +52,36 @@ SIGNAL("b")
 	PARENT = "";
 }
 
+SIGNAL("Binvert")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 2;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Binvert[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Binvert";
+}
+
+SIGNAL("Binvert[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Binvert";
+}
+
 SIGNAL("CarryIn")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -72,7 +102,7 @@ SIGNAL("CarryOut")
 	PARENT = "";
 }
 
-SIGNAL("operacao")
+SIGNAL("Operacao")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -82,24 +112,24 @@ SIGNAL("operacao")
 	PARENT = "";
 }
 
-SIGNAL("operacao[1]")
+SIGNAL("Operacao[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "operacao";
+	PARENT = "Operacao";
 }
 
-SIGNAL("operacao[0]")
+SIGNAL("Operacao[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "operacao";
+	PARENT = "Operacao";
 }
 
 SIGNAL("Result")
@@ -117,11 +147,29 @@ TRANSITION_LIST("a")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
 TRANSITION_LIST("b")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Binvert[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Binvert[0]")
 {
 	NODE
 	{
@@ -148,16 +196,16 @@ TRANSITION_LIST("CarryOut")
 	}
 }
 
-TRANSITION_LIST("operacao[1]")
+TRANSITION_LIST("Operacao[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("operacao[0]")
+TRANSITION_LIST("Operacao[0]")
 {
 	NODE
 	{
@@ -204,7 +252,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "operacao";
+	CHANNEL = "Binvert";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -214,7 +262,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "operacao[1]";
+	CHANNEL = "Binvert[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -224,7 +272,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "operacao[0]";
+	CHANNEL = "Binvert[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -234,10 +282,40 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "CarryOut";
+	CHANNEL = "Operacao";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+	CHILDREN = 7, 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Operacao[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Operacao[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CarryOut";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 0;
 }
 
@@ -246,7 +324,7 @@ DISPLAY_LINE
 	CHANNEL = "Result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 7;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 }
 

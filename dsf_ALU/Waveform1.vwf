@@ -28,12 +28,9 @@ HEADER
 	DATA_DURATION = 1000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
-	GRID_PERIOD = 0.0;
+	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
 }
-
-
-
 
 SIGNAL("a")
 {
@@ -153,14 +150,16 @@ TRANSITION_LIST("a")
 		LEVEL 0 FOR 1000.0;
 	}
 }
+
 TRANSITION_LIST("b")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
+
 TRANSITION_LIST("Binvert[1]")
 {
 	NODE
@@ -169,47 +168,8 @@ TRANSITION_LIST("Binvert[1]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
+
 TRANSITION_LIST("Binvert[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-TRANSITION_LIST("CarryIn")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-TRANSITION_LIST("CarryOut")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-TRANSITION_LIST("Operacao[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-TRANSITION_LIST("Operacao[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-TRANSITION_LIST("Result")
 {
 	NODE
 	{
@@ -218,6 +178,50 @@ TRANSITION_LIST("Result")
 	}
 }
 
+TRANSITION_LIST("CarryIn")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("CarryOut")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Operacao[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Operacao[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
 
 DISPLAY_LINE
 {
@@ -248,7 +252,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Binvert";
+	CHANNEL = "Operacao";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -258,7 +262,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Binvert[1]";
+	CHANNEL = "Operacao[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -268,7 +272,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Binvert[0]";
+	CHANNEL = "Operacao[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -278,7 +282,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Operacao";
+	CHANNEL = "Binvert";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -288,7 +292,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Operacao[1]";
+	CHANNEL = "Binvert[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -298,7 +302,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Operacao[0]";
+	CHANNEL = "Binvert[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -323,6 +327,7 @@ DISPLAY_LINE
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 }
+
 TIME_BAR
 {
 	TIME = 0;
