@@ -1,8 +1,9 @@
 |dsf_ALU
 Result <= dsf_Mult3to1:inst.Out
-a => inst15.IN0
-a => inst16.IN1
-a => dsf_somador_completo:inst1.a
+a => dsf_Mult2to1:inst4.In0
+a => inst6.IN0
+Ainvert[0] => dsf_Mult2to1:inst4.Sel[0]
+Ainvert[1] => dsf_Mult2to1:inst4.Sel[1]
 b => dsf_Mult2to1:inst2.In0
 b => inst3.IN0
 Binvert[0] => dsf_Mult2to1:inst2.Sel[0]
@@ -21,6 +22,16 @@ Sel[0] => Mux0.IN5
 Sel[0] => Mux1.IN5
 Sel[1] => Mux0.IN4
 Sel[1] => Mux1.IN4
+Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_Mult2to1:inst4
+In0 => Selector0.IN2
+In1 => Selector0.IN3
+Sel[0] => Equal0.IN63
+Sel[0] => Equal1.IN63
+Sel[1] => Equal0.IN62
+Sel[1] => Equal1.IN62
 Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 

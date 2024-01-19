@@ -42,6 +42,36 @@ SIGNAL("a")
 	PARENT = "";
 }
 
+SIGNAL("Ainvert")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 2;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Ainvert[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Ainvert";
+}
+
+SIGNAL("Ainvert[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Ainvert";
+}
+
 SIGNAL("b")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -102,7 +132,7 @@ SIGNAL("CarryOut")
 	PARENT = "";
 }
 
-SIGNAL("Operacao")
+SIGNAL("operacao")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -112,24 +142,24 @@ SIGNAL("Operacao")
 	PARENT = "";
 }
 
-SIGNAL("Operacao[1]")
+SIGNAL("operacao[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Operacao";
+	PARENT = "operacao";
 }
 
-SIGNAL("Operacao[0]")
+SIGNAL("operacao[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Operacao";
+	PARENT = "operacao";
 }
 
 SIGNAL("Result")
@@ -148,6 +178,24 @@ TRANSITION_LIST("a")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Ainvert[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Ainvert[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -183,7 +231,7 @@ TRANSITION_LIST("CarryIn")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -196,7 +244,7 @@ TRANSITION_LIST("CarryOut")
 	}
 }
 
-TRANSITION_LIST("Operacao[1]")
+TRANSITION_LIST("operacao[1]")
 {
 	NODE
 	{
@@ -205,7 +253,7 @@ TRANSITION_LIST("Operacao[1]")
 	}
 }
 
-TRANSITION_LIST("Operacao[0]")
+TRANSITION_LIST("operacao[0]")
 {
 	NODE
 	{
@@ -243,11 +291,32 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "CarryIn";
+	CHANNEL = "Ainvert";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
+	CHILDREN = 3, 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ainvert[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 2;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ainvert[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -255,9 +324,9 @@ DISPLAY_LINE
 	CHANNEL = "Binvert";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 3;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
-	CHILDREN = 4, 5;
+	CHILDREN = 6, 7;
 }
 
 DISPLAY_LINE
@@ -265,9 +334,9 @@ DISPLAY_LINE
 	CHANNEL = "Binvert[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 4;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
@@ -275,39 +344,18 @@ DISPLAY_LINE
 	CHANNEL = "Binvert[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 3;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Operacao";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
-	CHILDREN = 7, 8;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Operacao[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Operacao[0]";
+	CHANNEL = "CarryIn";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 6;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
@@ -321,10 +369,40 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Result";
+	CHANNEL = "operacao";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+	CHILDREN = 11, 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "operacao[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "operacao[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
 	TREE_LEVEL = 0;
 }
 
