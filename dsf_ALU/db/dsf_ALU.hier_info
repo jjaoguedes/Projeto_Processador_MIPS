@@ -1,48 +1,40 @@
 |dsf_ALU
-Result <= dsf_Mult3to1:inst.Out
+Result <= dsf_Mult4to1:inst.Out
 a => dsf_Mult2to1:inst4.In0
 a => inst6.IN0
-Ainvert[0] => dsf_Mult2to1:inst4.Sel[0]
-Ainvert[1] => dsf_Mult2to1:inst4.Sel[1]
+Ainvert => dsf_Mult2to1:inst4.Sel
 b => dsf_Mult2to1:inst2.In0
 b => inst3.IN0
-Binvert[0] => dsf_Mult2to1:inst2.Sel[0]
-Binvert[1] => dsf_Mult2to1:inst2.Sel[1]
-CarryIn => dsf_somador_completo:inst1.CarryIn
-operacao[0] => dsf_Mult3to1:inst.Sel[0]
-operacao[1] => dsf_Mult3to1:inst.Sel[1]
+Bnegate => dsf_Mult2to1:inst2.Sel
+Bnegate => dsf_somador_completo:inst1.CarryIn
+Less => dsf_Mult4to1:inst.In3
+operacao[0] => dsf_Mult4to1:inst.Sel[0]
+operacao[1] => dsf_Mult4to1:inst.Sel[1]
 CarryOut <= dsf_somador_completo:inst1.CarryOut
 
 
-|dsf_ALU|dsf_Mult3to1:inst
-In0 => Mux0.IN1
-In1 => Mux0.IN2
-In2 => Mux0.IN3
+|dsf_ALU|dsf_Mult4to1:inst
+In0 => Mux0.IN0
+In1 => Mux0.IN1
+In2 => Mux0.IN2
+In3 => Mux0.IN3
 Sel[0] => Mux0.IN5
-Sel[0] => Mux1.IN5
 Sel[1] => Mux0.IN4
-Sel[1] => Mux1.IN4
-Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |dsf_ALU|dsf_Mult2to1:inst4
-In0 => Selector0.IN2
-In1 => Selector0.IN3
-Sel[0] => Equal0.IN63
-Sel[0] => Equal1.IN63
-Sel[1] => Equal0.IN62
-Sel[1] => Equal1.IN62
-Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+In0 => Out.DATAA
+In1 => Out.DATAB
+Sel => Decoder0.IN0
+Out <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |dsf_ALU|dsf_Mult2to1:inst2
-In0 => Selector0.IN2
-In1 => Selector0.IN3
-Sel[0] => Equal0.IN63
-Sel[0] => Equal1.IN63
-Sel[1] => Equal0.IN62
-Sel[1] => Equal1.IN62
-Out <= Out$latch.DB_MAX_OUTPUT_PORT_TYPE
+In0 => Out.DATAA
+In1 => Out.DATAB
+Sel => Decoder0.IN0
+Out <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |dsf_ALU|dsf_somador_completo:inst1

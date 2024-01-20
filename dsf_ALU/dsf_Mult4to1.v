@@ -7,6 +7,6 @@ case (Sel)
 	0: Out <= In0;
 	1: Out <= In1;
 	2: Out <= In2;
-	default: Out <= In3;
+	3: Out <= In3;
   endcase
 endmodule

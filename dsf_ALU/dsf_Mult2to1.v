@@ -1,6 +1,6 @@
 module dsf_Mult2to1 (In0, In1, Sel, Out);
 input In0, In1;
-input [1:0] Sel;
+input Sel;
 output reg Out;
 always @(In0, In1, Sel)
 case (Sel)
