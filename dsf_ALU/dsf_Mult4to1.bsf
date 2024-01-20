@@ -20,36 +20,36 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 160 160)
+	(rect 16 16 256 160)
 	(text "dsf_Mult4to1" (rect 5 0 56 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "In0" (rect 0 0 11 12)(font "Arial" ))
-		(text "In0" (rect 21 27 32 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
+		(text "In1[WIDTH-1..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "In1[WIDTH-1..0]" (rect 21 27 85 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "In1" (rect 0 0 10 12)(font "Arial" ))
-		(text "In1" (rect 21 43 31 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
+		(text "In2[WIDTH-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "In2[WIDTH-1..0]" (rect 21 43 87 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "In2" (rect 0 0 11 12)(font "Arial" ))
-		(text "In2" (rect 21 59 32 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
+		(text "In3[WIDTH-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "In3[WIDTH-1..0]" (rect 21 59 87 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "In3" (rect 0 0 11 12)(font "Arial" ))
-		(text "In3" (rect 21 75 32 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
+		(text "In4[WIDTH-1..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "In4[WIDTH-1..0]" (rect 21 75 88 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 0 96)
@@ -59,13 +59,19 @@ applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 144 32)
+		(pt 240 32)
 		(output)
-		(text "Out" (rect 0 0 14 12)(font "Arial" ))
-		(text "Out" (rect 109 27 123 39)(font "Arial" ))
-		(line (pt 144 32)(pt 128 32)(line_width 1))
+		(text "Out[WIDTH-1..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 151 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
+	(parameter
+		"WIDTH"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 128 128)(line_width 1))
+		(rectangle (rect 16 16 224 128)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 256 -64 356 16))
 )

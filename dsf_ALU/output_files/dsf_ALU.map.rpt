@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dsf_ALU
-Sat Jan 20 17:28:38 2024
+Thu Jan 18 20:46:54 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 20 17:28:38 2024           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 18 20:46:54 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; dsf_ALU                                         ;
 ; Top-level Entity Name              ; dsf_ALU                                         ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 5                                               ;
-;     Total combinational functions  ; 5                                               ;
+; Total logic elements               ; 9                                               ;
+;     Total combinational functions  ; 9                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 9                                               ;
+; Total pins                         ; 11                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,25 +165,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                 ; Library ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------+---------+
+; dsf_Mult3to1.v                   ; yes             ; User Verilog HDL File              ; C:/altera/ASD/dsf_ALU/dsf_Mult3to1.v         ;         ;
 ; dsf_Mult2to1.v                   ; yes             ; User Verilog HDL File              ; C:/altera/ASD/dsf_ALU/dsf_Mult2to1.v         ;         ;
 ; dsf_somador_completo.v           ; yes             ; User Verilog HDL File              ; C:/altera/ASD/dsf_ALU/dsf_somador_completo.v ;         ;
-; dsf_Mult4to1.v                   ; yes             ; User Verilog HDL File              ; C:/altera/ASD/dsf_ALU/dsf_Mult4to1.v         ;         ;
 ; dsf_ALU.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/altera/ASD/dsf_ALU/dsf_ALU.bdf            ;         ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 9                ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; b~input          ;
-; Maximum fan-out          ; 3                ;
-; Total fan-out            ; 30               ;
-; Average fan-out          ; 1.30             ;
-+--------------------------+------------------+
++---------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary       ;
++--------------------------+------------------------+
+; Resource                 ; Usage                  ;
++--------------------------+------------------------+
+; I/O pins                 ; 11                     ;
+; DSP block 9-bit elements ; 0                      ;
+; Maximum fan-out node     ; dsf_Mult2to1:inst4|Out ;
+; Maximum fan-out          ; 4                      ;
+; Total fan-out            ; 39                     ;
+; Average fan-out          ; 1.26                   ;
++--------------------------+------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -190,11 +191,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------+--------------+
-; |dsf_ALU                        ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |dsf_ALU                            ; work         ;
-;    |dsf_Mult4to1:inst|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_Mult4to1:inst          ; work         ;
-;    |dsf_somador_completo:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_somador_completo:inst1 ; work         ;
+; |dsf_ALU                        ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 11   ; 0            ; |dsf_ALU                            ; work         ;
+;    |dsf_Mult2to1:inst2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_Mult2to1:inst2         ; work         ;
+;    |dsf_Mult2to1:inst4|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_Mult2to1:inst4         ; work         ;
+;    |dsf_Mult3to1:inst|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_Mult3to1:inst          ; work         ;
+;    |dsf_somador_completo:inst1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |dsf_ALU|dsf_somador_completo:inst1 ; work         ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; dsf_Mult3to1:inst|Out                              ; dsf_Mult3to1:inst|Mux1 ; yes                    ;
+; dsf_Mult2to1:inst4|Out                             ; Ainvert[1]             ; yes                    ;
+; dsf_Mult2to1:inst2|Out                             ; Binvert[1]             ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -227,7 +243,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jan 20 17:28:37 2024
+    Info: Processing started: Thu Jan 18 20:46:52 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dsf_ALU -c dsf_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file dsf_mult3to1.v
@@ -241,20 +257,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file dsf_mul
 Info (12021): Found 1 design units, including 1 entities, in source file dsf_alu.bdf
     Info (12023): Found entity 1: dsf_ALU
 Info (12127): Elaborating entity "dsf_ALU" for the top level hierarchy
-Info (12128): Elaborating entity "dsf_Mult4to1" for hierarchy "dsf_Mult4to1:inst"
+Info (12128): Elaborating entity "dsf_Mult3to1" for hierarchy "dsf_Mult3to1:inst"
+Warning (10270): Verilog HDL Case Statement warning at dsf_Mult3to1.v(6): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at dsf_Mult3to1.v(5): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Out" at dsf_Mult3to1.v(5)
 Info (12128): Elaborating entity "dsf_Mult2to1" for hierarchy "dsf_Mult2to1:inst4"
+Warning (10270): Verilog HDL Case Statement warning at dsf_Mult2to1.v(6): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at dsf_Mult2to1.v(5): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Out" at dsf_Mult2to1.v(5)
 Info (12128): Elaborating entity "dsf_somador_completo" for hierarchy "dsf_somador_completo:inst1"
+Warning (13012): Latch dsf_Mult3to1:inst|Out has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operacao[0]
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info (21061): Implemented 9 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4646 megabytes
-    Info: Processing ended: Sat Jan 20 17:28:38 2024
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Thu Jan 18 20:46:54 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 
