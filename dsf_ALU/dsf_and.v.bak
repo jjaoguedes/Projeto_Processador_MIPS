@@ -1,0 +1,8 @@
+module dsf_and #(parameter WIDTH = 32)(In0, In1, Out);
+input [WIDTH-1:0] In0, In1;
+output reg [WIDTH-1:0] Out;
+
+always @(In0, In1)
+	assign out = (In0 & In1);
+	
+endmodule

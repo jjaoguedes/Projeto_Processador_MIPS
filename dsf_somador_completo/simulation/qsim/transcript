@@ -22,5 +22,5 @@
 # Loading work.dsf_somador_completo_vlg_sample_tst
 # Loading work.dsf_somador_completo_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : dsf_somador_completo.vt(179)
+# ** Note: $finish    : dsf_somador_completo.vt(736)
 #    Time: 1 us  Iteration: 0  Instance: /dsf_somador_completo_vlg_vec_tst/tb_out

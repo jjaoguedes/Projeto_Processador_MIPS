@@ -1,0 +1,17 @@
+module dsf_ALU_32 (
+	input [32:0] a,
+	input [32:0] b, 
+	input CarryIn,
+	output [32:0] Result,
+	output CarryOut
+);
+
+	dsf_ALU # (.WIDTH(32)) 
+(
+	.CarryIn (CarryIn),
+	.CarryOut (CarryOut),
+	.Result (Result)
+	
+);
+
+endmodule

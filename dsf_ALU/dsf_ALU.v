@@ -14,12 +14,12 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
-// CREATED		"Wed Jan 17 17:37:29 2024"
+// CREATED		"Sat Jan 20 19:47:37 2024"
 
-module dsf_ALU #(parameter WIDTH = 1)(
+module dsf_ALU #(paramenter WIDTH = 32)(
 	a,
-	b,
 	CarryIn,
+	b,
 	operacao,
 	Result,
 	CarryOut
@@ -27,21 +27,17 @@ module dsf_ALU #(parameter WIDTH = 1)(
 
 
 input wire	[WIDTH-1:0] a;
-input wire	[WIDTH-1:0] b;
 input wire	CarryIn;
+input wire	[WIDTH-1:0] b;
 input wire	[1:0] operacao;
-output wire	Result;
+output wire	[WIDTH-1:0] Result;
 output wire	CarryOut;
 
-wire [WIDTH-1:0]	SYNTHESIZED_WIRE_0;
-wire [WIDTH-1:0]	SYNTHESIZED_WIRE_1;
-wire [WIDTH-1:0]	SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_2;
 
-
-
-
-
-dsf_Mult3to1 #(.WIDTH(WIDTH))	b2v_inst(
+dsf_Mult3to1	b2v_inst(
 	.In0(SYNTHESIZED_WIRE_0),
 	.In1(SYNTHESIZED_WIRE_1),
 	.In2(SYNTHESIZED_WIRE_2),
@@ -49,7 +45,7 @@ dsf_Mult3to1 #(.WIDTH(WIDTH))	b2v_inst(
 	.Out(Result));
 
 
-dsf_somador_completo #(.WIDTH(WIDTH))	b2v_inst1(
+dsf_somador_completo	b2v_inst1(
 	.a(a),
 	.b(b),
 	.CarryIn(CarryIn),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dsf_somador_completo
-Sun Jan 14 10:42:45 2024
+Sun Jan 21 15:50:56 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |dsf_somador_completo
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 14 10:42:45 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 21 15:50:56 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; dsf_somador_completo                            ;
 ; Top-level Entity Name              ; dsf_somador_completo                            ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 2                                               ;
-;     Total combinational functions  ; 2                                               ;
+; Total logic elements               ; 34                                              ;
+;     Total combinational functions  ; 34                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 5                                               ;
+; Total pins                         ; 98                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,12 +174,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 5                ;
+; I/O pins                 ; 98               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; a~input          ;
+; Maximum fan-out node     ; Add0~2           ;
 ; Maximum fan-out          ; 2                ;
-; Total fan-out            ; 13               ;
-; Average fan-out          ; 1.08             ;
+; Total fan-out            ; 231              ;
+; Average fan-out          ; 1.00             ;
 +--------------------------+------------------+
 
 
@@ -187,7 +188,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
-; |dsf_somador_completo      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 5    ; 0            ; |dsf_somador_completo ; work         ;
+; |dsf_somador_completo      ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 98   ; 0            ; |dsf_somador_completo ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -207,6 +208,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |dsf_somador_completo ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -222,22 +233,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jan 14 10:42:43 2024
+    Info: Processing started: Sun Jan 21 15:50:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dsf_somador_completo -c dsf_somador_completo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file dsf_somador_completo.v
     Info (12023): Found entity 1: dsf_somador_completo
 Info (12127): Elaborating entity "dsf_somador_completo" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at dsf_somador_completo.v(8): truncated value with size 32 to match size of target (1)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+Info (21057): Implemented 132 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 65 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 34 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4646 megabytes
-    Info: Processing ended: Sun Jan 14 10:42:45 2024
+    Info: Processing ended: Sun Jan 21 15:50:56 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
