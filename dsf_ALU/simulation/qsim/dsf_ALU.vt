@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/21/2024 16:24:11"
+// Generated on "01/21/2024 21:40:45"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    dsf_ALU
 // 
@@ -28,20 +28,24 @@
 `timescale 1 ps/ 1 ps
 module dsf_ALU_vlg_sample_tst(
 	a,
+	Ainvert,
 	b,
+	Binvert,
 	CarryIn,
 	operacao,
 	sampler_tx
 );
 input [3:0] a;
+input  Ainvert;
 input [3:0] b;
+input  Binvert;
 input  CarryIn;
 input [1:0] operacao;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(a or b or CarryIn or operacao)
+always @(a or Ainvert or b or Binvert or CarryIn or operacao)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -239,7 +243,9 @@ module dsf_ALU_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg [3:0] a;
+reg Ainvert;
 reg [3:0] b;
+reg Binvert;
 reg CarryIn;
 reg [1:0] operacao;
 // wires                                               
@@ -252,7 +258,9 @@ wire sampler;
 dsf_ALU i1 (
 // port map - connection between master ports and signals/registers   
 	.a(a),
+	.Ainvert(Ainvert),
 	.b(b),
+	.Binvert(Binvert),
 	.CarryIn(CarryIn),
 	.CarryOut(CarryOut),
 	.operacao(operacao),
@@ -266,7 +274,7 @@ end
 // a[ 2 ]
 initial
 begin
-	a[2] = 1'b1;
+	a[2] = 1'b0;
 end 
 // a[ 1 ]
 initial
@@ -281,7 +289,7 @@ end
 // b[ 3 ]
 initial
 begin
-	b[3] = 1'b1;
+	b[3] = 1'b0;
 end 
 // b[ 2 ]
 initial
@@ -291,22 +299,24 @@ end
 // b[ 1 ]
 initial
 begin
-	b[1] = 1'b1;
+	b[1] = 1'b0;
 end 
 // b[ 0 ]
 initial
 begin
 	b[0] = 1'b0;
 end 
-// operacao[ 1 ]
+
+// Ainvert
 initial
 begin
-	operacao[1] = 1'b1;
+	Ainvert = 1'b1;
 end 
-// operacao[ 0 ]
+
+// Binvert
 initial
 begin
-	operacao[0] = 1'b0;
+	Binvert = 1'b1;
 end 
 
 // CarryIn
@@ -314,10 +324,22 @@ initial
 begin
 	CarryIn = 1'b0;
 end 
+// operacao[ 1 ]
+initial
+begin
+	operacao[1] = 1'b0;
+end 
+// operacao[ 0 ]
+initial
+begin
+	operacao[0] = 1'b0;
+end 
 
 dsf_ALU_vlg_sample_tst tb_sample (
 	.a(a),
+	.Ainvert(Ainvert),
 	.b(b),
+	.Binvert(Binvert),
 	.CarryIn(CarryIn),
 	.operacao(operacao),
 	.sampler_tx(sampler)

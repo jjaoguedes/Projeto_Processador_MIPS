@@ -1,0 +1,7 @@
+module dsf_not #(parameter WIDTH = 32)(In0, Out);
+input [WIDTH-1:0] In0;
+output [WIDTH-1:0] Out;
+
+assign Out = ~In0;
+	
+endmodule

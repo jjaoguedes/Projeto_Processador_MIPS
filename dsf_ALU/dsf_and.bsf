@@ -31,13 +31,6 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "In1[WIDTH-1..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "In1[WIDTH-1..0]" (rect 21 43 85 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
 		(pt 240 32)
 		(output)
 		(text "Out[WIDTH-1..0]" (rect 0 0 68 12)(font "Arial" ))

@@ -1,5 +1,5 @@
 Fitter report for dsf_ALU
-Sun Jan 21 16:20:25 2024
+Sun Jan 21 21:39:51 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,18 +63,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 21 16:20:25 2024           ;
+; Fitter Status                      ; Successful - Sun Jan 21 21:39:51 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; dsf_ALU                                         ;
 ; Top-level Entity Name              ; dsf_ALU                                         ;
 ; Family                             ; Cyclone IV GX                                   ;
 ; Device                             ; EP4CGX15BF14C6                                  ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 14 / 14,400 ( < 1 % )                           ;
-;     Total combinational functions  ; 14 / 14,400 ( < 1 % )                           ;
+; Total logic elements               ; 22 / 14,400 ( < 1 % )                           ;
+;     Total combinational functions  ; 22 / 14,400 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 0 / 14,400 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 16 / 81 ( 20 % )                                ;
+; Total pins                         ; 18 / 81 ( 22 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 552,960 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -165,17 +165,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Result[2]   ; Incomplete set of assignments ;
 ; Result[1]   ; Incomplete set of assignments ;
 ; Result[0]   ; Incomplete set of assignments ;
-; CarryIn     ; Incomplete set of assignments ;
+; Ainvert     ; Incomplete set of assignments ;
 ; a[0]        ; Incomplete set of assignments ;
+; CarryIn     ; Incomplete set of assignments ;
+; Binvert     ; Incomplete set of assignments ;
 ; b[0]        ; Incomplete set of assignments ;
-; operacao[1] ; Incomplete set of assignments ;
 ; b[3]        ; Incomplete set of assignments ;
 ; a[3]        ; Incomplete set of assignments ;
-; b[2]        ; Incomplete set of assignments ;
-; a[2]        ; Incomplete set of assignments ;
-; b[1]        ; Incomplete set of assignments ;
-; a[1]        ; Incomplete set of assignments ;
 ; operacao[0] ; Incomplete set of assignments ;
+; operacao[1] ; Incomplete set of assignments ;
+; a[2]        ; Incomplete set of assignments ;
+; b[2]        ; Incomplete set of assignments ;
+; a[1]        ; Incomplete set of assignments ;
+; b[1]        ; Incomplete set of assignments ;
 +-------------+-------------------------------+
 
 
@@ -185,8 +187,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 57 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 57 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 69 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 69 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -209,7 +211,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 47      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 59      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -225,28 +227,28 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 14 / 14,400 ( < 1 % ) ;
-;     -- Combinational with no register       ; 14                    ;
+; Total logic elements                        ; 22 / 14,400 ( < 1 % ) ;
+;     -- Combinational with no register       ; 22                    ;
 ;     -- Register only                        ; 0                     ;
 ;     -- Combinational with a register        ; 0                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 1                     ;
-;     -- 3 input functions                    ; 11                    ;
-;     -- <=2 input functions                  ; 2                     ;
+;     -- 4 input functions                    ; 5                     ;
+;     -- 3 input functions                    ; 7                     ;
+;     -- <=2 input functions                  ; 10                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 10                    ;
+;     -- normal mode                          ; 18                    ;
 ;     -- arithmetic mode                      ; 4                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 0 / 14,733 ( 0 % )    ;
 ;     -- Dedicated logic registers            ; 0 / 14,400 ( 0 % )    ;
 ;     -- I/O registers                        ; 0 / 333 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 1 / 900 ( < 1 % )     ;
+; Total LABs:  partially or completely used   ; 3 / 900 ( < 1 % )     ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 16 / 81 ( 20 % )      ;
+; I/O pins                                    ; 18 / 81 ( 22 % )      ;
 ;     -- Clock pins                           ; 1 / 6 ( 17 % )        ;
 ;     -- Dedicated input pins                 ; 0 / 12 ( 0 % )        ;
 ;                                             ;                       ;
@@ -266,10 +268,10 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; Impedance control blocks                    ; 0 / 3 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 5                     ;
-; Highest non-global fan-out                  ; 5                     ;
-; Total fan-out                               ; 67                    ;
-; Average fan-out                             ; 1.20                  ;
+; Maximum fan-out                             ; 8                     ;
+; Highest non-global fan-out                  ; 8                     ;
+; Total fan-out                               ; 89                    ;
+; Average fan-out                             ; 1.31                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -282,28 +284,28 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 14 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
-;     -- Combinational with no register       ; 14                   ; 0                              ;
+; Total logic elements                        ; 22 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
+;     -- Combinational with no register       ; 22                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;     -- Combinational with a register        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 1                    ; 0                              ;
-;     -- 3 input functions                    ; 11                   ; 0                              ;
-;     -- <=2 input functions                  ; 2                    ; 0                              ;
+;     -- 4 input functions                    ; 5                    ; 0                              ;
+;     -- 3 input functions                    ; 7                    ; 0                              ;
+;     -- <=2 input functions                  ; 10                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 10                   ; 0                              ;
+;     -- normal mode                          ; 18                   ; 0                              ;
 ;     -- arithmetic mode                      ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 0                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 0 / 14400 ( 0 % )    ; 0 / 14400 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 1 / 900 ( < 1 % )    ; 0 / 900 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 3 / 900 ( < 1 % )    ; 0 / 900 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 16                   ; 0                              ;
+; I/O pins                                    ; 18                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                    ; 0                              ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -315,7 +317,7 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 62                   ; 5                              ;
+;     -- Total Connections                    ; 84                   ; 5                              ;
 ;     -- Registered Connections               ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -323,7 +325,7 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 11                   ; 0                              ;
+;     -- Input Ports                          ; 13                   ; 0                              ;
 ;     -- Output Ports                         ; 5                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
@@ -348,17 +350,19 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; CarryIn     ; M9    ; 4        ; 24           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; a[0]        ; N4    ; 3        ; 10           ; 0            ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; a[1]        ; G13   ; 5        ; 33           ; 16           ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; a[2]        ; N9    ; 4        ; 20           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; a[3]        ; M6    ; 3        ; 12           ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; b[0]        ; M11   ; 4        ; 29           ; 0            ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; b[1]        ; K8    ; 4        ; 22           ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; b[2]        ; K9    ; 4        ; 22           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; b[3]        ; N6    ; 3        ; 12           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; operacao[0] ; H13   ; 5        ; 33           ; 16           ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; operacao[1] ; L9    ; 4        ; 24           ; 0            ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; Ainvert     ; M7    ; 4        ; 16           ; 0            ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; Binvert     ; H12   ; 5        ; 33           ; 14           ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; CarryIn     ; L12   ; 5        ; 33           ; 12           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; a[0]        ; N7    ; 4        ; 16           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; a[1]        ; K12   ; 5        ; 33           ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; a[2]        ; K8    ; 4        ; 22           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; a[3]        ; K9    ; 4        ; 22           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; b[0]        ; L9    ; 4        ; 24           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; b[1]        ; N9    ; 4        ; 20           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; b[2]        ; N8    ; 4        ; 20           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; b[3]        ; L13   ; 5        ; 33           ; 12           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; operacao[0] ; J13   ; 5        ; 33           ; 15           ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; operacao[1] ; C8    ; 7        ; 22           ; 31           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -367,11 +371,11 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; CarryOut  ; L7    ; 3        ; 14           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Result[0] ; N8    ; 4        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Result[1] ; L5    ; 3        ; 14           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Result[2] ; A12   ; 7        ; 20           ; 31           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Result[3] ; N10   ; 4        ; 26           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; CarryOut  ; M6    ; 3        ; 12           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Result[0] ; G9    ; 6        ; 33           ; 22           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Result[1] ; L7    ; 3        ; 14           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Result[2] ; N6    ; 3        ; 12           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Result[3] ; L5    ; 3        ; 14           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -385,9 +389,8 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; K5       ; MSEL0                 ; -                        ; -                ; Dedicated Programming Pin ;
 ; J5       ; CONF_DONE             ; -                        ; -                ; Dedicated Programming Pin ;
 ; K6       ; nSTATUS               ; -                        ; -                ; Dedicated Programming Pin ;
-; N4       ; DIFFIO_B1p, CRC_ERROR ; Use as regular IO        ; a[0]             ; Dual Purpose Pin          ;
 ; N5       ; DIFFIO_B1n, NCEO      ; Use as programming pin   ; ~ALTERA_NCEO~    ; Dual Purpose Pin          ;
-; M6       ; DIFFIO_B2p, INIT_DONE ; Use as regular IO        ; a[3]             ; Dual Purpose Pin          ;
+; M6       ; DIFFIO_B2p, INIT_DONE ; Use as regular IO        ; CarryOut         ; Dual Purpose Pin          ;
 ; A5       ; DATA0                 ; As input tri-stated      ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
 ; B5       ; ASDO                  ; As input tri-stated      ; ~ALTERA_ASDO~    ; Dual Purpose Pin          ;
 ; C5       ; NCSO                  ; As input tri-stated      ; ~ALTERA_NCSO~    ; Dual Purpose Pin          ;
@@ -403,11 +406,11 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCCLKIN Voltage ;
 +----------+-----------------+---------------+--------------+------------------+
 ; QL0      ; 0 / 8 ( 0 % )   ; --            ; --           ; --               ;
-; 3        ; 6 / 8 ( 75 % )  ; 2.5V          ; --           ; --               ;
+; 3        ; 5 / 8 ( 63 % )  ; 2.5V          ; --           ; --               ;
 ; 3A       ; 0 / 2 ( 0 % )   ; --            ; --           ; 2.5V             ;
-; 4        ; 8 / 14 ( 57 % ) ; 2.5V          ; --           ; --               ;
-; 5        ; 2 / 12 ( 17 % ) ; 2.5V          ; --           ; --               ;
-; 6        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; --               ;
+; 4        ; 7 / 14 ( 50 % ) ; 2.5V          ; --           ; --               ;
+; 5        ; 5 / 12 ( 42 % ) ; 2.5V          ; --           ; --               ;
+; 6        ; 1 / 12 ( 8 % )  ; 2.5V          ; --           ; --               ;
 ; 7        ; 1 / 14 ( 7 % )  ; 2.5V          ; --           ; --               ;
 ; 8A       ; 0 / 2 ( 0 % )   ; --            ; --           ; 2.5V             ;
 ; 8        ; 0 / 5 ( 0 % )   ; 2.5V          ; --           ; --               ;
@@ -431,7 +434,7 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; A9       ; 81         ; 7        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A10      ; 82         ; 7        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A11      ; 79         ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A12      ; 80         ; 7        ; Result[2]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A12      ; 80         ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A13      ; 73         ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -453,7 +456,7 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; C5       ; 92         ; 9        ; ~ALTERA_NCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP  ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; On           ;
 ; C6       ; 85         ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C7       ;            ; 8        ; VCCIO8                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C8       ; 78         ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C8       ; 78         ; 7        ; operacao[1]                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C9       ;            ; 7        ; VCCIO7                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C10      ;            ; 7        ; VCCIO7                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C11      ; 69         ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -506,11 +509,11 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; G6       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G7       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G9       ; 60         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G9       ; 60         ; 6        ; Result[0]                                        ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G10      ; 59         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G11      ;            ; 6        ; VCCIO6                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; G13      ; 55         ; 5        ; a[1]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G13      ; 55         ; 5        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H3       ;            ; --       ; VCCL_GXB                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -522,8 +525,8 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; H9       ;            ; --       ; VCCA                                             ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; H10      ; 52         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H11      ;            ; 5        ; VCCIO5                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H12      ; 51         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; H13      ; 56         ; 5        ; operacao[0]                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H12      ; 51         ; 5        ; Binvert                                          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H13      ; 56         ; 5        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J1       ; 15         ; QL0      ; GXB_GND*                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; J2       ; 14         ; QL0      ; GXB_GND*                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; J3       ;            ; --       ; VCCA_GXB                                         ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -536,7 +539,7 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; J10      ;            ;          ; VCCD_PLL                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J11      ;            ; 5        ; VCCIO5                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J13      ; 53         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J13      ; 53         ; 5        ; operacao[0]                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K3       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -544,48 +547,48 @@ The pin-out file can be found in C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.pin.
 ; K5       ; 18         ; 3        ; ^MSEL0                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K6       ; 20         ; 3        ; ^nSTATUS                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K7       ;            ; 3A       ; VCC_CLKIN3A                                      ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; K8       ; 35         ; 4        ; b[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; K9       ; 36         ; 4        ; b[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; K8       ; 35         ; 4        ; a[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; K9       ; 36         ; 4        ; a[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; K10      ; 43         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; K11      ; 48         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; K12      ; 47         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K12      ; 47         ; 5        ; a[1]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K13      ; 54         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L1       ;            ;          ; RREF                                             ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L3       ; 16         ; 3        ; ^MSEL2                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L4       ; 21         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; L5       ; 27         ; 3        ; Result[1]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L5       ; 27         ; 3        ; Result[3]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L6       ;            ; 3        ; VCCIO3                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; L7       ; 28         ; 3        ; CarryOut                                         ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L7       ; 28         ; 3        ; Result[1]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L8       ;            ; 4        ; VCCIO4                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; L9       ; 37         ; 4        ; operacao[1]                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; L9       ; 37         ; 4        ; b[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L10      ;            ; 4        ; VCCIO4                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L11      ; 44         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; L12      ; 50         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L13      ; 49         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L12      ; 50         ; 5        ; CarryIn                                          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L13      ; 49         ; 5        ; b[3]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M2       ;            ; --       ; VCCA_GXB                                         ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M3       ;            ;          ; NC                                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; M4       ; 22         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; M5       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; M6       ; 25         ; 3        ; a[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; M7       ; 31         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; M6       ; 25         ; 3        ; CarryOut                                         ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; M7       ; 31         ; 4        ; Ainvert                                          ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; M8       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; M9       ; 38         ; 4        ; CarryIn                                          ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; M9       ; 38         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; M10      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; M11      ; 41         ; 4        ; b[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; M11      ; 41         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; M12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M13      ; 46         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N1       ;            ; --       ; VCCL_GXB                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N2       ;            ;          ; NC                                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N3       ; 17         ; 3        ; ^MSEL1                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; N4       ; 23         ; 3        ; a[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N4       ; 23         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N5       ; 24         ; 3        ; ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN       ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N6       ; 26         ; 3        ; b[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N7       ; 32         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; N8       ; 33         ; 4        ; Result[0]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N9       ; 34         ; 4        ; a[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N10      ; 39         ; 4        ; Result[3]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N6       ; 26         ; 3        ; Result[2]                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N7       ; 32         ; 4        ; a[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N8       ; 33         ; 4        ; b[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N9       ; 34         ; 4        ; b[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N10      ; 39         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N11      ; 40         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N12      ; 42         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N13      ; 45         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -598,7 +601,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                 ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
-; |dsf_ALU                        ; 14 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 16   ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; |dsf_ALU                            ; work         ;
+; |dsf_ALU                        ; 22 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 18   ; 0            ; 22 (0)       ; 0 (0)             ; 0 (0)            ; |dsf_ALU                            ; work         ;
+;    |dsf_Mult2to1:inst4|         ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |dsf_ALU|dsf_Mult2to1:inst4         ; work         ;
+;    |dsf_Mult2to1:inst7|         ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |dsf_ALU|dsf_Mult2to1:inst7         ; work         ;
 ;    |dsf_somador_completo:inst1| ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |dsf_ALU|dsf_somador_completo:inst1 ; work         ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -614,17 +619,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Result[2]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Result[1]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Result[0]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; CarryIn     ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
-; a[0]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
-; b[0]        ; Input    ; --            ; (6) 1313 ps   ; --                    ; --  ; --   ;
-; operacao[1] ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
-; b[3]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; Ainvert     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; a[0]        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; CarryIn     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Binvert     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; b[0]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; b[3]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; a[3]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
-; b[2]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; operacao[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; operacao[1] ; Input    ; --            ; (6) 1313 ps   ; --                    ; --  ; --   ;
 ; a[2]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; b[2]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; a[1]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; b[1]        ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
-; a[1]        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; operacao[0] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +-------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -633,40 +640,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
 +----------------------------------------------+-------------------+---------+
-; CarryIn                                      ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~1     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|CarryOut~0 ; 0                 ; 6       ;
+; Ainvert                                      ;                   ;         ;
 ; a[0]                                         ;                   ;         ;
+; CarryIn                                      ;                   ;         ;
 ;      - dsf_somador_completo:inst1|Add0~2     ; 0                 ; 6       ;
 ;      - dsf_somador_completo:inst1|CarryOut~0 ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~16    ; 0                 ; 6       ;
+; Binvert                                      ;                   ;         ;
+;      - dsf_Mult2to1:inst4|Out[0]~0           ; 0                 ; 6       ;
+;      - dsf_Mult2to1:inst4|Out[3]~1           ; 0                 ; 6       ;
+;      - dsf_Mult2to1:inst4|Out[2]~2           ; 0                 ; 6       ;
+;      - dsf_Mult2to1:inst4|Out[1]~3           ; 0                 ; 6       ;
 ; b[0]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~2     ; 1                 ; 6       ;
-;      - dsf_somador_completo:inst1|CarryOut~0 ; 1                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~16    ; 1                 ; 6       ;
-; operacao[1]                                  ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~11    ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~13    ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~15    ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~16    ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~17    ; 0                 ; 6       ;
+;      - dsf_Mult2to1:inst4|Out[0]~0           ; 0                 ; 6       ;
 ; b[3]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~8     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~10    ; 0                 ; 6       ;
+;      - dsf_Mult2to1:inst4|Out[3]~1           ; 0                 ; 6       ;
 ; a[3]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~8     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~10    ; 0                 ; 6       ;
-; b[2]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~6     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~12    ; 0                 ; 6       ;
-; a[2]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~6     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~12    ; 0                 ; 6       ;
-; b[1]                                         ;                   ;         ;
-;      - dsf_somador_completo:inst1|Add0~4     ; 0                 ; 6       ;
-;      - dsf_somador_completo:inst1|Add0~14    ; 0                 ; 6       ;
-; a[1]                                         ;                   ;         ;
+;      - dsf_Mult2to1:inst7|Out[3]~0           ; 0                 ; 6       ;
 ; operacao[0]                                  ;                   ;         ;
+;      - dsf_somador_completo:inst1|Add0~0     ; 0                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~12    ; 0                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~14    ; 0                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~16    ; 0                 ; 6       ;
+; operacao[1]                                  ;                   ;         ;
+;      - dsf_somador_completo:inst1|Add0~0     ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~11    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~12    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~13    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~14    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~15    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~16    ; 1                 ; 6       ;
+;      - dsf_somador_completo:inst1|Add0~17    ; 1                 ; 6       ;
+; a[2]                                         ;                   ;         ;
+;      - dsf_Mult2to1:inst7|Out[2]~1           ; 0                 ; 6       ;
+; b[2]                                         ;                   ;         ;
+;      - dsf_Mult2to1:inst4|Out[2]~2           ; 0                 ; 6       ;
+; a[1]                                         ;                   ;         ;
+;      - dsf_Mult2to1:inst7|Out[1]~2           ; 0                 ; 6       ;
+; b[1]                                         ;                   ;         ;
+;      - dsf_Mult2to1:inst4|Out[1]~3           ; 0                 ; 6       ;
 +----------------------------------------------+-------------------+---------+
 
 
@@ -675,17 +686,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+---------+
 ; Name                                  ; Fan-Out ;
 +---------------------------------------+---------+
-; operacao[1]~input                     ; 5       ;
+; operacao[1]~input                     ; 8       ;
+; Ainvert~input                         ; 5       ;
 ; operacao[0]~input                     ; 4       ;
-; b[0]~input                            ; 3       ;
-; a[0]~input                            ; 3       ;
-; a[1]~input                            ; 2       ;
-; b[1]~input                            ; 2       ;
-; a[2]~input                            ; 2       ;
-; b[2]~input                            ; 2       ;
-; a[3]~input                            ; 2       ;
-; b[3]~input                            ; 2       ;
+; Binvert~input                         ; 4       ;
+; dsf_Mult2to1:inst4|Out[0]~0           ; 3       ;
 ; CarryIn~input                         ; 2       ;
+; a[0]~input                            ; 2       ;
+; dsf_Mult2to1:inst7|Out[0]~3           ; 2       ;
+; dsf_Mult2to1:inst4|Out[1]~3           ; 2       ;
+; dsf_Mult2to1:inst7|Out[1]~2           ; 2       ;
+; dsf_Mult2to1:inst4|Out[2]~2           ; 2       ;
+; dsf_Mult2to1:inst7|Out[2]~1           ; 2       ;
+; dsf_Mult2to1:inst7|Out[3]~0           ; 2       ;
+; dsf_Mult2to1:inst4|Out[3]~1           ; 2       ;
+; b[1]~input                            ; 1       ;
+; a[1]~input                            ; 1       ;
+; b[2]~input                            ; 1       ;
+; a[2]~input                            ; 1       ;
+; a[3]~input                            ; 1       ;
+; b[3]~input                            ; 1       ;
+; b[0]~input                            ; 1       ;
 ; dsf_somador_completo:inst1|Add0~17    ; 1       ;
 ; dsf_somador_completo:inst1|Add0~16    ; 1       ;
 ; dsf_somador_completo:inst1|Add0~15    ; 1       ;
@@ -693,8 +714,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dsf_somador_completo:inst1|Add0~13    ; 1       ;
 ; dsf_somador_completo:inst1|Add0~12    ; 1       ;
 ; dsf_somador_completo:inst1|Add0~11    ; 1       ;
-; dsf_somador_completo:inst1|Add0~10    ; 1       ;
+; dsf_somador_completo:inst1|Add0~0     ; 1       ;
 ; dsf_somador_completo:inst1|CarryOut~0 ; 1       ;
+; dsf_somador_completo:inst1|Add0~9     ; 1       ;
 ; dsf_somador_completo:inst1|Add0~8     ; 1       ;
 ; dsf_somador_completo:inst1|Add0~7     ; 1       ;
 ; dsf_somador_completo:inst1|Add0~6     ; 1       ;
@@ -702,7 +724,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dsf_somador_completo:inst1|Add0~4     ; 1       ;
 ; dsf_somador_completo:inst1|Add0~3     ; 1       ;
 ; dsf_somador_completo:inst1|Add0~2     ; 1       ;
-; dsf_somador_completo:inst1|Add0~1     ; 1       ;
 +---------------------------------------+---------+
 
 
@@ -711,29 +732,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-----------------------+
 ; Other Routing Resource Type       ; Usage                 ;
 +-----------------------------------+-----------------------+
-; Block interconnects               ; 18 / 42,960 ( < 1 % ) ;
-; C16 interconnects                 ; 2 / 1,518 ( < 1 % )   ;
-; C4 interconnects                  ; 24 / 26,928 ( < 1 % ) ;
+; Block interconnects               ; 27 / 42,960 ( < 1 % ) ;
+; C16 interconnects                 ; 17 / 1,518 ( 1 % )    ;
+; C4 interconnects                  ; 17 / 26,928 ( < 1 % ) ;
+; Direct links                      ; 6 / 42,960 ( < 1 % )  ;
 ; GXB block output buffers          ; 0 / 1,200 ( 0 % )     ;
 ; Global clocks                     ; 0 / 20 ( 0 % )        ;
 ; Interquad Reference Clock Outputs ; 0 / 1 ( 0 % )         ;
 ; Interquad TXRX Clocks             ; 0 / 8 ( 0 % )         ;
 ; Interquad TXRX PCSRX outputs      ; 0 / 4 ( 0 % )         ;
 ; Interquad TXRX PCSTX outputs      ; 0 / 4 ( 0 % )         ;
-; Local interconnects               ; 8 / 14,400 ( < 1 % )  ;
-; R24 interconnects                 ; 3 / 1,710 ( < 1 % )   ;
-; R4 interconnects                  ; 18 / 37,740 ( < 1 % ) ;
+; Local interconnects               ; 10 / 14,400 ( < 1 % ) ;
+; R24 interconnects                 ; 6 / 1,710 ( < 1 % )   ;
+; R4 interconnects                  ; 17 / 37,740 ( < 1 % ) ;
 +-----------------------------------+-----------------------+
 
 
++--------------------------------------------------------------------------+
+; LAB Logic Elements                                                       ;
++--------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 7.33) ; Number of LABs  (Total = 3) ;
++--------------------------------------------+-----------------------------+
+; 1                                          ; 0                           ;
+; 2                                          ; 0                           ;
+; 3                                          ; 2                           ;
+; 4                                          ; 0                           ;
+; 5                                          ; 0                           ;
+; 6                                          ; 0                           ;
+; 7                                          ; 0                           ;
+; 8                                          ; 0                           ;
+; 9                                          ; 0                           ;
+; 10                                         ; 0                           ;
+; 11                                         ; 0                           ;
+; 12                                         ; 0                           ;
+; 13                                         ; 0                           ;
+; 14                                         ; 0                           ;
+; 15                                         ; 0                           ;
+; 16                                         ; 1                           ;
++--------------------------------------------+-----------------------------+
+
+
 +---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
+; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 14.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced  (Average = 7.00) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
+; 3                                           ; 2                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
@@ -744,66 +791,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
-; 14                                          ; 1                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 13.00) ; Number of LABs  (Total = 1) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 5.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced Out  (Average = 3.67) ; Number of LABs  (Total = 3) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 3                                               ; 2                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 11.00) ; Number of LABs  (Total = 1) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 7.00) ; Number of LABs  (Total = 3) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 2                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 1                           ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -863,26 +889,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 16        ; 0            ; 0            ; 16        ; 16        ; 0            ; 5            ; 0            ; 0            ; 11           ; 0            ; 5            ; 11           ; 0            ; 0            ; 0            ; 5            ; 0            ; 0            ; 0            ; 0            ; 0            ; 16        ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 18        ; 0            ; 0            ; 18        ; 18        ; 0            ; 5            ; 0            ; 0            ; 13           ; 0            ; 5            ; 13           ; 0            ; 0            ; 0            ; 5            ; 0            ; 0            ; 0            ; 0            ; 0            ; 18        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 16           ; 16           ; 16           ; 16           ; 16           ; 0         ; 16           ; 16           ; 0         ; 0         ; 16           ; 11           ; 16           ; 16           ; 5            ; 16           ; 11           ; 5            ; 16           ; 16           ; 16           ; 11           ; 16           ; 16           ; 16           ; 16           ; 16           ; 0         ; 16           ; 16           ;
+; Total Inapplicable ; 18           ; 18           ; 18           ; 18           ; 18           ; 0         ; 18           ; 18           ; 0         ; 0         ; 18           ; 13           ; 18           ; 18           ; 5            ; 18           ; 13           ; 5            ; 18           ; 18           ; 18           ; 13           ; 18           ; 18           ; 18           ; 18           ; 18           ; 0         ; 18           ; 18           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; CarryOut           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Result[3]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Result[2]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Result[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Result[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CarryIn            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Ainvert            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; a[0]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CarryIn            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Binvert            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b[0]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; operacao[1]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b[3]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; a[3]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; b[2]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; a[2]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; b[1]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; a[1]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; operacao[0]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; operacao[1]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; a[2]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; b[2]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; a[1]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; b[1]               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -941,23 +969,25 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_NCSO~ is reserved at location C5
     Info (169125): Pin ~ALTERA_DCLK~ is reserved at location A4
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 16 pins of 16 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 18 pins of 18 total pins
     Info (169086): Pin CarryOut not assigned to an exact location on the device
     Info (169086): Pin Result[3] not assigned to an exact location on the device
     Info (169086): Pin Result[2] not assigned to an exact location on the device
     Info (169086): Pin Result[1] not assigned to an exact location on the device
     Info (169086): Pin Result[0] not assigned to an exact location on the device
-    Info (169086): Pin CarryIn not assigned to an exact location on the device
+    Info (169086): Pin Ainvert not assigned to an exact location on the device
     Info (169086): Pin a[0] not assigned to an exact location on the device
+    Info (169086): Pin CarryIn not assigned to an exact location on the device
+    Info (169086): Pin Binvert not assigned to an exact location on the device
     Info (169086): Pin b[0] not assigned to an exact location on the device
-    Info (169086): Pin operacao[1] not assigned to an exact location on the device
     Info (169086): Pin b[3] not assigned to an exact location on the device
     Info (169086): Pin a[3] not assigned to an exact location on the device
-    Info (169086): Pin b[2] not assigned to an exact location on the device
-    Info (169086): Pin a[2] not assigned to an exact location on the device
-    Info (169086): Pin b[1] not assigned to an exact location on the device
-    Info (169086): Pin a[1] not assigned to an exact location on the device
     Info (169086): Pin operacao[0] not assigned to an exact location on the device
+    Info (169086): Pin operacao[1] not assigned to an exact location on the device
+    Info (169086): Pin a[2] not assigned to an exact location on the device
+    Info (169086): Pin b[2] not assigned to an exact location on the device
+    Info (169086): Pin a[1] not assigned to an exact location on the device
+    Info (169086): Pin b[1] not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'dsf_ALU.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -969,7 +999,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 16 (unused VREF, 2.5V VCCIO, 11 input, 5 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 18 (unused VREF, 2.5V VCCIO, 13 input, 5 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -983,7 +1013,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  2 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  5 pins available
         Info (176213): I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  0 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -996,17 +1026,17 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.00 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file C:/altera/ASD/dsf_ALU/output_files/dsf_ALU.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4975 megabytes
-    Info: Processing ended: Sun Jan 21 16:20:25 2024
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4967 megabytes
+    Info: Processing ended: Sun Jan 21 21:39:52 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

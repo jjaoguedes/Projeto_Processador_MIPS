@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\altera\ASD\dsf_ALU\simulation\qsim
 vdsf_ALU
-Z1 !s100 NZ9NkY6d4>b0okfDebXfg3
-Z2 Idf5=AW2LR@`e@ON=CcnES1
-Z3 Ve;WdlCI=>43QGGg7_PQmz3
-Z4 dC:\altera\ASD\dsf_ALU\simulation\qsim
-Z5 w1705865052
-Z6 8dsf_ALU.vo
-Z7 Fdsf_ALU.vo
+Z1 IYY;JV?k9;gk30<zChhB402
+Z2 VWJlOBBo0eY=Qgbz10Zb201
+Z3 dC:\altera\ASD\dsf_ALU\simulation\qsim
+Z4 w1705884046
+Z5 8dsf_ALU.vo
+Z6 Fdsf_ALU.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|dsf_ALU.vo|
-Z10 o-work work -O0
-Z11 ndsf_@a@l@u
+Z8 !s90 -work|work|dsf_ALU.vo|
+Z9 o-work work -O0
+Z10 ndsf_@a@l@u
 !i10b 1
+Z11 !s100 J81[V]6WzPH6Y6kYH4l561
 !s85 0
-Z12 !s108 1705865052.706000
+Z12 !s108 1705884046.766000
 Z13 !s107 dsf_ALU.vo|
 !s101 -O0
 vdsf_ALU_vlg_check_tst
 !i10b 1
-Z14 !s100 7S`8^6Q4^V;?Mdi?Y[5N=0
-Z15 IEjmURzgcMWK^I1DNkgTJ43
-Z16 VVmI4P?_;oN>89ni;AN5;_0
-R4
-Z17 w1705865051
-Z18 8dsf_ALU.vt
-Z19 Fdsf_ALU.vt
-L0 63
-R8
+!s100 B=P1R1FiCG_aN>^4Ul1k32
+Io4>8<P`mhSf2jfbQlzE503
+Z14 VVmI4P?_;oN>89ni;AN5;_0
+R3
+Z15 w1705884045
+Z16 8dsf_ALU.vt
+Z17 Fdsf_ALU.vt
+L0 67
+R7
 r1
 !s85 0
 31
-Z20 !s108 1705865052.789000
-Z21 !s107 dsf_ALU.vt|
-Z22 !s90 -work|work|dsf_ALU.vt|
+Z18 !s108 1705884046.829000
+Z19 !s107 dsf_ALU.vt|
+Z20 !s90 -work|work|dsf_ALU.vt|
 !s101 -O0
-R10
-Z23 ndsf_@a@l@u_vlg_check_tst
+R9
+Z21 ndsf_@a@l@u_vlg_check_tst
 vdsf_ALU_vlg_sample_tst
 !i10b 1
-Z24 !s100 iaTNbUon[bn9GGz=8bBQD0
-Z25 I0R;KK]N@OR^leKz0l4SDV1
-Z26 VOOmjT[4bB:kMI7Lin[U:k3
-R4
+!s100 I;<ZD3F_:WbMO6XzNO4BK0
+I]_e8ZmYCb7NB1mDHQcGoO1
+VTb0>EGaMiB<WgYNC8nB<n2
+R3
+R15
+R16
 R17
-R18
-R19
 L0 29
-R8
+R7
 r1
 !s85 0
 31
+R18
+R19
 R20
-R21
-R22
 !s101 -O0
-R10
-Z27 ndsf_@a@l@u_vlg_sample_tst
+R9
+Z22 ndsf_@a@l@u_vlg_sample_tst
 vdsf_ALU_vlg_vec_tst
 !i10b 1
-!s100 4IJOz8N`>XAccm4_gf52R1
-IR;e`84Ag1`IAkVj7257a;2
-Z28 V4SB4Y;YJf0Wn:N[iKRKbj1
-R4
+!s100 fI2PIT[ia>@eo?FjlbA8A2
+I=`:P^PahF6gkKoW=W1TYo1
+Z23 V4SB4Y;YJf0Wn:N[iKRKbj1
+R3
+R15
+R16
 R17
-R18
-R19
-Z29 L0 238
-R8
+L0 242
+R7
 r1
 !s85 0
 31
+R18
+R19
 R20
-R21
-R22
 !s101 -O0
-R10
-Z30 ndsf_@a@l@u_vlg_vec_tst
+R9
+Z24 ndsf_@a@l@u_vlg_vec_tst

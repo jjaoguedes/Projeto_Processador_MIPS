@@ -1,30 +1,24 @@
 |dsf_ALU
 CarryOut <= dsf_somador_completo:inst1.CarryOut
 CarryIn => dsf_somador_completo:inst1.CarryIn
-a[0] => dsf_somador_completo:inst1.a[0]
-a[0] => dsf_and:inst2.In0[0]
-a[0] => dsf_or:inst3.In0[0]
-a[1] => dsf_somador_completo:inst1.a[1]
-a[1] => dsf_and:inst2.In0[1]
-a[1] => dsf_or:inst3.In0[1]
-a[2] => dsf_somador_completo:inst1.a[2]
-a[2] => dsf_and:inst2.In0[2]
-a[2] => dsf_or:inst3.In0[2]
-a[3] => dsf_somador_completo:inst1.a[3]
-a[3] => dsf_and:inst2.In0[3]
-a[3] => dsf_or:inst3.In0[3]
-b[0] => dsf_somador_completo:inst1.b[0]
-b[0] => dsf_and:inst2.In1[0]
-b[0] => dsf_or:inst3.In1[0]
-b[1] => dsf_somador_completo:inst1.b[1]
-b[1] => dsf_and:inst2.In1[1]
-b[1] => dsf_or:inst3.In1[1]
-b[2] => dsf_somador_completo:inst1.b[2]
-b[2] => dsf_and:inst2.In1[2]
-b[2] => dsf_or:inst3.In1[2]
-b[3] => dsf_somador_completo:inst1.b[3]
-b[3] => dsf_and:inst2.In1[3]
-b[3] => dsf_or:inst3.In1[3]
+Ainvert => dsf_Mult2to1:inst7.Sel
+a[0] => dsf_Mult2to1:inst7.In0[0]
+a[0] => dsf_not:inst6.In0[0]
+a[1] => dsf_Mult2to1:inst7.In0[1]
+a[1] => dsf_not:inst6.In0[1]
+a[2] => dsf_Mult2to1:inst7.In0[2]
+a[2] => dsf_not:inst6.In0[2]
+a[3] => dsf_Mult2to1:inst7.In0[3]
+a[3] => dsf_not:inst6.In0[3]
+Binvert => dsf_Mult2to1:inst4.Sel
+b[0] => dsf_Mult2to1:inst4.In0[0]
+b[0] => dsf_not:inst5.In0[0]
+b[1] => dsf_Mult2to1:inst4.In0[1]
+b[1] => dsf_not:inst5.In0[1]
+b[2] => dsf_Mult2to1:inst4.In0[2]
+b[2] => dsf_not:inst5.In0[2]
+b[3] => dsf_Mult2to1:inst4.In0[3]
+b[3] => dsf_not:inst5.In0[3]
 Result[0] <= dsf_Mult3to1:inst.Out[0]
 Result[1] <= dsf_Mult3to1:inst.Out[1]
 Result[2] <= dsf_Mult3to1:inst.Out[2]
@@ -54,6 +48,60 @@ soma[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 soma[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 soma[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 CarryOut <= CarryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_Mult2to1:inst7
+In0[0] => Out.DATAA
+In0[1] => Out.DATAA
+In0[2] => Out.DATAA
+In0[3] => Out.DATAA
+In1[0] => Out.DATAB
+In1[1] => Out.DATAB
+In1[2] => Out.DATAB
+In1[3] => Out.DATAB
+Sel => Decoder0.IN0
+Out[0] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_not:inst6
+In0[0] => Out[0].DATAIN
+In0[1] => Out[1].DATAIN
+In0[2] => Out[2].DATAIN
+In0[3] => Out[3].DATAIN
+Out[0] <= In0[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= In0[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= In0[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= In0[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_Mult2to1:inst4
+In0[0] => Out.DATAA
+In0[1] => Out.DATAA
+In0[2] => Out.DATAA
+In0[3] => Out.DATAA
+In1[0] => Out.DATAB
+In1[1] => Out.DATAB
+In1[2] => Out.DATAB
+In1[3] => Out.DATAB
+Sel => Decoder0.IN0
+Out[0] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dsf_ALU|dsf_not:inst5
+In0[0] => Out[0].DATAIN
+In0[1] => Out[1].DATAIN
+In0[2] => Out[2].DATAIN
+In0[3] => Out[3].DATAIN
+Out[0] <= In0[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= In0[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= In0[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= In0[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |dsf_ALU|dsf_Mult3to1:inst

@@ -53,7 +53,23 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -168 104 0 120)
+	(rect -920 288 -752 304)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "b[3..0]" (rect 5 0 37 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -912 64 -744 80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "a[3..0]" (rect 5 0 37 12)(font "Arial" ))
 	(pt 168 8)
@@ -69,9 +85,25 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -152 320 16 336)
+	(rect -456 352 -288 368)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b[3..0]" (rect 5 0 37 12)(font "Arial" ))
+	(text "Binvert" (rect 5 0 41 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -456 136 -288 152)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Ainvert" (rect 5 0 41 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -165,55 +197,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 672 120 854 148))
 )
 (symbol
-	(rect 352 280 592 392)
-	(text "dsf_somador_completo" (rect 5 0 120 12)(font "Arial" ))
-	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "a[WIDTH-1..0]" (rect 0 0 71 12)(font "Arial" ))
-		(text "a[WIDTH-1..0]" (rect 21 27 92 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "b[WIDTH-1..0]" (rect 0 0 71 12)(font "Arial" ))
-		(text "b[WIDTH-1..0]" (rect 21 43 92 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "CarryIn" (rect 0 0 37 12)(font "Arial" ))
-		(text "CarryIn" (rect 21 59 58 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 240 32)
-		(output)
-		(text "soma[WIDTH-1..0]" (rect 0 0 93 12)(font "Arial" ))
-		(text "soma[WIDTH-1..0]" (rect 141 27 234 39)(font "Arial" ))
-		(line (pt 240 32)(pt 224 32)(line_width 3))
-	)
-	(port
-		(pt 240 48)
-		(output)
-		(text "CarryOut" (rect 0 0 46 12)(font "Arial" ))
-		(text "CarryOut" (rect 181 43 227 55)(font "Arial" ))
-		(line (pt 240 48)(pt 224 48))
-	)
-	(parameter
-		"WIDTH"
-		"4"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 224 96))
-	)
-	(annotation_block (parameter)(rect 352 440 534 468))
-)
-(symbol
 	(rect 88 200 328 280)
 	(text "dsf_or" (rect 5 0 36 12)(font "Arial" ))
 	(text "inst3" (rect 8 64 31 76)(font "Arial" ))
@@ -235,7 +218,7 @@ applicable agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "Out[WIDTH-1..0]" (rect 149 27 219 39)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 232 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(parameter
@@ -270,7 +253,7 @@ applicable agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "Out[WIDTH-1..0]" (rect 149 27 219 39)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 232 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(parameter
@@ -282,6 +265,195 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 224 64))
 	)
 	(annotation_block (parameter)(rect 328 48 510 76))
+)
+(symbol
+	(rect -704 312 -464 392)
+	(text "dsf_not" (rect 5 0 42 12)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "In0[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In0[WIDTH-1..0]" (rect 21 27 102 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 232 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 224 64))
+	)
+	(annotation_block (parameter)(rect -464 432 -282 460))
+)
+(symbol
+	(rect 352 280 592 392)
+	(text "dsf_somador_completo" (rect 5 0 120 12)(font "Arial" ))
+	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a[WIDTH-1..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "a[WIDTH-1..0]" (rect 21 27 92 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b[WIDTH-1..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "b[WIDTH-1..0]" (rect 21 43 92 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "CarryIn" (rect 0 0 37 12)(font "Arial" ))
+		(text "CarryIn" (rect 21 59 58 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "soma[WIDTH-1..0]" (rect 0 0 93 12)(font "Arial" ))
+		(text "soma[WIDTH-1..0]" (rect 141 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "CarryOut" (rect 0 0 46 12)(font "Arial" ))
+		(text "CarryOut" (rect 181 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+	(annotation_block (parameter)(rect 352 440 534 468))
+)
+(symbol
+	(rect -288 296 -48 408)
+	(text "dsf_Mult2to1" (rect 5 0 68 12)(font "Arial" ))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "In0[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In0[WIDTH-1..0]" (rect 21 27 102 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "In1[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In1[WIDTH-1..0]" (rect 21 43 102 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Sel" (rect 0 0 15 12)(font "Arial" ))
+		(text "Sel" (rect 21 59 36 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+	(annotation_block (parameter)(rect -48 432 134 460))
+)
+(symbol
+	(rect -704 96 -464 176)
+	(text "dsf_not" (rect 5 0 42 12)(font "Arial" ))
+	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "In0[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In0[WIDTH-1..0]" (rect 21 27 102 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 232 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 224 64))
+	)
+	(annotation_block (parameter)(rect -464 200 -282 228))
+)
+(symbol
+	(rect -288 80 -48 192)
+	(text "dsf_Mult2to1" (rect 5 0 68 12)(font "Arial" ))
+	(text "inst7" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "In0[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In0[WIDTH-1..0]" (rect 21 27 102 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "In1[WIDTH-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "In1[WIDTH-1..0]" (rect 21 43 102 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Sel" (rect 0 0 15 12)(font "Arial" ))
+		(text "Sel" (rect 21 59 36 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "Out[WIDTH-1..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "Out[WIDTH-1..0]" (rect 149 27 232 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+	(annotation_block (parameter)(rect -48 48 134 76))
 )
 (connector
 	(pt 672 264)
@@ -347,16 +519,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 0 112)
-	(pt 16 112)
-	(bus)
-)
-(connector
-	(pt 16 112)
-	(pt 88 112)
-	(bus)
-)
-(connector
 	(pt 88 128)
 	(pt 56 128)
 	(bus)
@@ -392,7 +554,12 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 16 328)
+	(pt 944 216)
+	(pt 912 216)
+	(bus)
+)
+(connector
+	(pt -48 328)
 	(pt 56 328)
 	(bus)
 )
@@ -402,11 +569,88 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 944 216)
-	(pt 912 216)
+	(pt -296 328)
+	(pt -296 296)
 	(bus)
 )
-(junction (pt 16 112))
+(connector
+	(pt -288 328)
+	(pt -296 328)
+	(bus)
+)
+(connector
+	(pt -288 344)
+	(pt -464 344)
+	(bus)
+)
+(connector
+	(pt -704 344)
+	(pt -720 344)
+	(bus)
+)
+(connector
+	(pt -720 344)
+	(pt -720 296)
+	(bus)
+)
+(connector
+	(pt -296 296)
+	(pt -720 296)
+	(bus)
+)
+(connector
+	(pt -720 296)
+	(pt -752 296)
+	(bus)
+)
+(connector
+	(pt -48 112)
+	(pt 16 112)
+	(bus)
+)
+(connector
+	(pt 16 112)
+	(pt 88 112)
+	(bus)
+)
+(connector
+	(pt -288 112)
+	(pt -440 112)
+	(bus)
+)
+(connector
+	(pt -440 112)
+	(pt -440 72)
+	(bus)
+)
+(connector
+	(pt -720 128)
+	(pt -704 128)
+	(bus)
+)
+(connector
+	(pt -720 72)
+	(pt -720 128)
+	(bus)
+)
+(connector
+	(pt -744 72)
+	(pt -720 72)
+	(bus)
+)
+(connector
+	(pt -720 72)
+	(pt -440 72)
+	(bus)
+)
+(connector
+	(pt -464 128)
+	(pt -288 128)
+	(bus)
+)
 (junction (pt 56 248))
 (junction (pt 16 232))
 (junction (pt 56 328))
+(junction (pt -720 296))
+(junction (pt 16 112))
+(junction (pt -720 72))

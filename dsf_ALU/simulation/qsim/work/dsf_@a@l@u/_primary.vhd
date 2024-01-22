@@ -4,7 +4,9 @@ entity dsf_ALU is
     port(
         CarryOut        : out    vl_logic;
         CarryIn         : in     vl_logic;
+        Ainvert         : in     vl_logic;
         a               : in     vl_logic_vector(3 downto 0);
+        Binvert         : in     vl_logic;
         b               : in     vl_logic_vector(3 downto 0);
         Result          : out    vl_logic_vector(3 downto 0);
         operacao        : in     vl_logic_vector(1 downto 0)
